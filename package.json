@@ -1,0 +1,32 @@
+{
+  "name": "rigger-browserify",
+  "description": "Rigger plugin to support the //=browserify instruction",
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "tags": [
+    "build",
+    "browserify"
+  ],
+  "version": "0.0.0",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "debug": "*",
+    "browserify": "2.13.x"
+  },
+  "devDependencies": {
+    "mocha": "1.9.x",
+    "rigger": "0.5.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/buildjs/rigger-browserify.git"
+  },
+  "bugs": {
+    "url": "http://github.com/buildjs/rigger-browserify/issues"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "contributors": []
+}
