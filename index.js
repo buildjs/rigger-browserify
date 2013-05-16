@@ -20,6 +20,11 @@ exports = module.exports = function(rigger, target) {
     debug('initializing bundle: ' + target);
     b = browserify(path.resolve(rigger.csd, target));
 
+    // iterate through the specified transforms and transform
+    transforms.forEach(function(transform) {
+        b.transform(require(transform));
+    });
+
     b.bundle(opts, function(err, content) {
         fs.writeFileSync(path.resolve(__dirname, 'test/output.js'), content);
         scope.done(err, content);
