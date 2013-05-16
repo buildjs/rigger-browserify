@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "mocha": "1.9.x",
-    "stylify": "0.0.x"
+    "stylify": "0.0.x",
+    "controls": "0.0.x"
   },
   "repository": {
     "type": "git",

@@ -16,4 +16,10 @@ describe('transform resolution tests', function() {
 
         riggerBrowserify.call(scope, rigger, 'src/require-styl-nested [stylify]');
     });
+
+    it('should be able to browserify controls/dial which uses stylify', function(done) {
+        var scope = comparator(done, path.resolve(__dirname, 'output/require-controls-dial.js'));
+
+        riggerBrowserify.call(scope, rigger, 'src/require-controls-dial [stylify]');
+    });
 });
