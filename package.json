@@ -7,17 +7,14 @@
     "browserify"
   ],
   "version": "0.1.1",
-  "engines": {
-    "node": ">= 0.8.0"
-  },
   "dependencies": {
-    "debug": "*",
-    "browserify": "2.13.x"
+    "browserify-transform-tools": "~1.6.0",
+    "debug": "~2.2.0"
   },
   "devDependencies": {
-    "mocha": "1.9.x",
-    "stylify": "0.0.x",
-    "controls": "0.0.x"
+    "controls": "~0.7.5",
+    "mocha": "~3.0.2",
+    "stylify": "~1.3.1"
   },
   "repository": {
     "type": "git",
