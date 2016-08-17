@@ -24,7 +24,13 @@
     "url": "http://github.com/buildjs/rigger-browserify/issues"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "mocha --reporter spec"
   },
-  "contributors": []
+  "contributors": [],
+  "homepage": "https://github.com/buildjs/rigger-browserify#readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "license": "ISC"
 }
