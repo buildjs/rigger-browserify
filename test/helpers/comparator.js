@@ -8,7 +8,7 @@ module.exports = function(done, targetFile) {
     return {
         done: function(err, output) {
             assert.ifError(err);
-            assert.equal(output, comparison);
+            assert.equal(output.toString(), comparison);
             done();
         }
     };
