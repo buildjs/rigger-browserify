@@ -1,1 +1,0 @@
-var dial = require('controls/dial');
