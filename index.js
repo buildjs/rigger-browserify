@@ -5,11 +5,8 @@ var path = require('path'),
     reTransform = /(\S+)\s+\[(.*)\]/;
 
 exports = module.exports = function(rigger, target) {
-    var scope = this,
-        match = reTransform.exec(target),
-        transforms = [],
-        opts = {},
-        b;
+    const match = reTransform.exec(target);
+    let transforms = [];
 
     if (match) {
         transforms = match[2].split(/\,\s/);
@@ -18,15 +15,9 @@ exports = module.exports = function(rigger, target) {
 
     // initialise the bundle
     debug('initializing bundle: ' + target);
-    b = browserify(path.resolve(rigger.csd, target));
+    const b = browserify(path.resolve(rigger.csd, target));
 
     // iterate through the specified transforms and transform
-    transforms.forEach(function(transform) {
-        b.transform(require(transform));
-    });
-
-    b.bundle(opts, function(err, content) {
-        fs.writeFileSync(path.resolve(__dirname, 'test/output.js'), content);
-        scope.done(err, content);
-    });
+    transforms.forEach(transform => b.transform(require(transform)));
+    b.bundle((err, content) => this.done(err, content));
 };
